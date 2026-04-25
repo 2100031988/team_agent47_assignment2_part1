@@ -14,6 +14,20 @@ authors = [
     { name = "Sabyasachi Kumar" }
 ]
 
+license = { file = "LICENSE" }
+
+keywords = ["machine learning", "numpy", "data science", "numerical computing"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/2100031988/NumCompute"
+Issues = "https://github.com/2100031988/NumCompute/issues"
+
 [tool.setuptools.packages.find]
 include = ["numcompute*"]
-exclude = ["demo*"]
+exclude = ["demo*", "tests*"]
