@@ -1,1 +1,5 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/2100031988/NumCompute
+    about: Check README before creating an issue
