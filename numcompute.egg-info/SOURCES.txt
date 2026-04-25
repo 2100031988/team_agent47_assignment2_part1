@@ -1,4 +1,5 @@
-README.md
+LICENSE
+PYPI_README.md
 pyproject.toml
 numcompute/__init__.py
 numcompute/io.py
@@ -7,7 +8,6 @@ numcompute/optim.py
 numcompute/pipeline.py
 numcompute/preprocessing.py
 numcompute/rank.py
-numcompute/setup.py
 numcompute/sort_search.py
 numcompute/stats.py
 numcompute/utils.py

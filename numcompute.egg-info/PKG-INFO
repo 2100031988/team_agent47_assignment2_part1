@@ -1,79 +1,98 @@
 Metadata-Version: 2.4
 Name: numcompute
-Version: 0.1.0
+Version: 0.1.3
 Summary: A lightweight NumPy-inspired numerical computing library
 Author: Sabyasachi Kumar
+License: MIT License
+        
+        Copyright (c) 2026 Sabyasachi Kumar
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/2100031988/NumCompute
+Project-URL: Issues, https://github.com/2100031988/NumCompute/issues
+Keywords: machine learning,numpy,data science,numerical computing
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: numpy
+Dynamic: license-file
 
-<h1 align="center"> NumCompute: NumPy-Based ML Framework 🚀 </h1>
+# NumCompute 
 
-<p align="center">
-    <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python" alt="Python">
-    <img src="https://img.shields.io/badge/NumPy-Enabled-orange?logo=numpy" alt="NumPy">
-    <img src="https://img.shields.io/badge/Status-Completed-success" alt="Status">
-    <img src="https://img.shields.io/badge/Tests-20+-brightgreen" alt="Tests">
-    <img src="https://img.shields.io/badge/License-Academic-lightgrey" alt="License">
-</p>
+**NumCompute** is a lightweight, NumPy-inspired numerical computing library built for learning, experimentation, and basic machine learning workflows.
 
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-installation">Installation</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-benchmarking">Benchmark</a> •
-  <a href="#-project-structure">Structure</a>
-</p>
+It provides simple and efficient implementations of common numerical operations such as statistics, preprocessing, optimization, metrics, and pipeline utilities.
 
 ---
 
-## 🌟 Project Overview
+# Overview
 
-**NumCompute** is a lightweight machine learning framework built entirely using **NumPy**, designed to simulate core functionality of libraries like scikit-learn.
-
-This project focuses on:
-- Deep algorithmic understanding  
-- Numerical computation  
-- Clean software engineering  
-- Fully vectorised implementations  
+NumCompute is designed to simplify numerical computing in Python by offering easy-to-use functions similar to NumPy and Scikit-learn but in a lightweight, educational form.
+It can be used in machine learning and deep learning module packages
 
 ---
 
-## 🚀 Features
+# Key Features
 
-- 📥 **CSV Loader** with missing value handling  
-- 🔄 **Preprocessing Tools** (Scaler, Encoder, Imputer)  
-- 🔍 **Sorting & Searching Algorithms** (Top-K, Binary Search, Quickselect)  
-- 📊 **Statistical Functions** (Mean, Std, Quantiles, Histogram)  
-- 🏆 **Ranking System** with tie handling  
-- 📈 **Evaluation Metrics** (Accuracy, F1, MSE, ROC, AUC)  
-- ⚡ **Optimization** (Gradient & Jacobian estimation)  
-- 🔗 **Pipeline System** (like scikit-learn)  
-- 🧪 **20+ Unit Tests**  
-- 📊 **Performance Benchmarking**  
+- Basic statistical operations (mean, median, variance, etc.)
+- Data preprocessing utilities (normalization, scaling)
+- Sorting and searching algorithms
+- Evaluation metrics for ML models
+- Simple optimization tools
+- Pipeline support for chaining operations
 
 ---
 
-## 📂 Project Structure
+# Installation
+
+Install from TestPyPI:
 
 ```bash
-NumCompute/
-│
-├── numcompute/
-│   ├── __init__.py
-│   ├── io.py
-│   ├── preprocessing.py
-│   ├── sort_search.py
-│   ├── rank.py
-│   ├── stats.py
-│   ├── metrics.py
-│   ├── optim.py
-│   ├── pipeline.py
-│   └── utils.py
-│
-├── tests/
-├── demo/
-│   └── quickstart.ipynb
-├── benchmark/
-├── setup.py
-└── README.md
+pip install -i https://test.pypi.org/simple/ numcompute
+```
+
+# Example and Usage
+
+Import the library and start using numerical functions easily. Here, is the example of the package in usage
+
+```bash
+import numcompute as nc
+
+data = [10, 20, 30, 40, 50]
+
+# Statistical operations
+print(nc.mean(data))
+print(nc.median(data))
+print(nc.variance(data))
+
+# Preprocessing
+print(nc.normalize(data))
+
+# Sorting / Searching
+print(nc.sort(data))
+print(nc.binary_search(data, 30))
+```
+
+# Author
+
+Sabyasachi Kumar
