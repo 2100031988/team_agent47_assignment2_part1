@@ -161,8 +161,10 @@ NumCompute/
 ├── pyproject.toml
 ├── README.md
 ├── PYPI_README.md
+└── .gitignore
 └── LICENSE
 ```
+
 ---
 
 ## 🧪 Running Tests
