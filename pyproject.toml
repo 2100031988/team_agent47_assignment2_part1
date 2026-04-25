@@ -14,7 +14,6 @@ authors = [
     { name = "Sabyasachi Kumar" }
 ]
 
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "Operating System :: OS Independent"
-]
+[tool.setuptools.packages.find]
+include = ["numcompute*"]
+exclude = ["demo*"]
