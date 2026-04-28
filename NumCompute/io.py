@@ -28,7 +28,6 @@ def load_csv(
     if data is None or data.size == 0:
         raise ValueError("CSV file is empty or invalid")
 
-    # Ensure consistent 2D shape
     if data.ndim == 1:
         data = data.reshape(-1, 1)
 
