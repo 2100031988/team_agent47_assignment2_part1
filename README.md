@@ -1,10 +1,8 @@
-<h1 align="center">NumCompute: NumPy-Based ML Framework 🚀</h1>
+<h1 align="center">NumCompute: A Numpy Toolkit </h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python" alt="Python">
   <img src="https://img.shields.io/badge/NumPy-Enabled-orange?logo=numpy" alt="NumPy">
-  <img src="https://img.shields.io/badge/Status-Completed-success" alt="Status">
-  <img src="https://img.shields.io/badge/Tests-20+-brightgreen" alt="Tests">
   <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License">
 </p>
 
@@ -20,44 +18,32 @@
 
 ---
 
-## 🌟 Project Overview
+## Overview
 
-**NumCompute** is a lightweight machine learning and numerical computing framework built using **NumPy**. It simulates core functionality of libraries like **scikit-learn**, while keeping the internals transparent and educational.
+**NumCompute** is a lightweight machine learning framework built using **NumPy**. It can function on core libraries like **scikit-learn** while keeping the internal function transparent and understandable for users.
 
-**Designed for:**
-- 🎓 Learning ML algorithms from scratch
-- 🔬 Academic assignments and evaluations
-- 🧠 Building intuition for NumPy-based systems
-- 🔧 Experimenting with end-to-end ML pipelines
+**Designed usage:**
+There are numerous usages of this library but some listed below : 
 
----
+1. It is a perfect tool to evaluate assignment tools and validation.
+2. We can learn about Machine Learning algorithms from scratch.
+3. Lastly, the most important usage is for developing pipelines as we can experiment with many stages.
 
-## 🚀 Features
-
-| Category | Features |
-|----------|----------|
-| 📥 **I/O** | CSV Loader with missing value handling |
-| 🔄 **Preprocessing** | StandardScaler, LabelEncoder, Imputer |
-| 🔍 **Algorithms** | Binary Search, Quickselect, Top-K |
-| 📊 **Statistics** | Mean, Median, Std, Variance, Histogram |
-| 🏆 **Ranking** | Tie-aware ranking system |
-| 📈 **Metrics** | Accuracy, F1, MSE, ROC-AUC |
-| ⚡ **Optimization** | Gradient & Jacobian estimation |
-| 🔗 **Pipeline** | scikit-learn style ML pipeline |
-| 🧪 **Testing** | 20+ unit tests with `pytest` |
-| 📊 **Benchmarking** | Performance comparison tools |
 
 ---
 
-## 📦 Installation
+## Installation
+We can install the project in your desktop through two steps mentioned below:
 
 ### Option 1: Install from TestPyPI
+We can install it directly in your desktop by typing the below command in the **terminal** in visual studio code.
 
 ```bash
 pip install -i https://test.pypi.org/simple/ numcompute
 ```
 
-### Option 2: Install from Source
+### Option 2: Install from Source 
+We can also install it from my repository through github commands in the **terminal** in visual studio code.
 
 ```bash
 git clone https://github.com/2100031988/NumCompute.git
@@ -67,59 +53,43 @@ pip install .
 
 ---
 
-## ⚡ Usage
+## Examples
+Here the some of the example code chunks provided to help us better understand the code.
 
 ```python
-import numcompute as nc
 
+import numcompute as nc
 data = [10, 20, 30, 40, 50]
 
-# 📊 Statistics
+# <----- Statistics ----->
 print("Mean:", nc.mean(data))
 print("Median:", nc.median(data))
 print("Std:", nc.std(data))
 
-# 🔄 Preprocessing
+
+# <----- Preprocessing ----->
 print("Normalized:", nc.normalize(data))
 
-# 🔍 Sorting & Searching
+
+# <----- Sorting & Searching ----->
 print("Sorted:", nc.sort(data))
 print("Search 30:", nc.binary_search(data, 30))
 
-# 📈 Metrics
+
+# <----- Metrics ----->
 print("MSE:", nc.mse([1, 2, 3], [1, 2, 4]))
-```
 
-### Pipeline Example
 
-```python
+# <----- Pipeline example ----->
 from numcompute.pipeline import Pipeline
 from numcompute.preprocessing import StandardScaler, LabelEncoder
-
 pipeline = Pipeline([
     ("scaler", StandardScaler()),
     ("encoder", LabelEncoder()),
 ])
-
 pipeline.fit(X_train)
 X_transformed = pipeline.transform(X_test)
-```
 
----
-
-## 📊 Benchmarking
-
-NumCompute includes benchmarking tools to compare performance of custom implementations against optimized NumPy operations.
-
-**Benchmarks include:**
-- Sorting algorithm performance comparison
-- Statistical function execution time
-- Pipeline processing throughput
-
-Run benchmarks:
-
-```bash
-python benchmark/run_benchmarks.py
 ```
 
 ---
@@ -167,7 +137,7 @@ NumCompute/
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 pytest tests/
@@ -187,7 +157,7 @@ pytest tests/ --cov=numcompute
 
 ---
 
-## 🌐 TestPyPI Release
+## TestPyPI Release
 
 This project is published on TestPyPI:
 
@@ -195,22 +165,13 @@ This project is published on TestPyPI:
 
 ---
 
-## 🎯 Project Goals
 
-- [x] Understand ML algorithms from scratch
-- [x] Build NumPy-like functionality manually
-- [x] Apply software engineering principles (modular design, testing)
-- [x] Create a reusable, scalable ML framework
-- [x] Publish to TestPyPI
-
----
-
-## 👨‍💻 Author
+## Contributors
 
 **Sabyasachi Kumar**
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
