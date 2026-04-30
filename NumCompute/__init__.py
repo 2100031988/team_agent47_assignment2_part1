@@ -1,3 +1,5 @@
+# description of the package
+
 """
 NumCompute: A lightweight NumPy-based machine learning framework.
 
@@ -12,17 +14,20 @@ This package provides:
 - Pipeline abstraction system
 """
 
-# Core modules
-from .io import load_csv
+# this file is used as the main entry point for the package so we import all the key components here. Moerover, users can directly import it using any speicifc name of ther choice. 
+# For example, import numcompute as np and then they can find mean of the data using np.mean().
 
-from .preprocessing import (
+
+from .io import load_csv        # read csv files
+
+from .preprocessing import (        # preprocessing tools
     StandardScaler,
     MinMaxScaler,
     OneHotEncoder,
     SimpleImputer
 )
 
-from .stats import (
+from .stats import (        # basic numarical operations
     mean,
     median,
     std,
@@ -32,7 +37,7 @@ from .stats import (
     histogram
 )
 
-from .sort_search import (
+from .sort_search import (       # sorting and searching algorithms 
     stable_sort,
     multi_key_sort,
     topk,
@@ -40,9 +45,9 @@ from .sort_search import (
     quickselect
 )
 
-from .rank import rank, percentile
+from .rank import rank, percentile  # use for ranking values and calculating percentiles
 
-from .metrics import (
+from .metrics import (      # basic evaluation metrics for machine learning models
     accuracy,
     precision,
     recall,
@@ -53,11 +58,10 @@ from .metrics import (
     auc
 )
 
-from .optim import grad, jacobian
+from .optim import grad, jacobian   # numerical optimization tools for calculating gradients and Jacobians
 
-from .pipeline import Pipeline, FeatureUnion, Transformer, Estimator
+from .pipeline import Pipeline, FeatureUnion, Transformer, Estimator    # basic pipeline 
 
-from numcompute import StandardScaler, Pipeline
 __all__ = [
     "load_csv",
 
