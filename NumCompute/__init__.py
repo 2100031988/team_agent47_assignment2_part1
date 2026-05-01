@@ -60,7 +60,7 @@ from .metrics import (      # basic evaluation metrics for machine learning mode
 
 from .optim import grad, jacobian   # numerical optimization tools for calculating gradients and Jacobians
 
-from .pipeline import Pipeline, FeatureUnion, Transformer, Estimator    # basic pipeline 
+from .pipeline import Pipeline, FeatureUnion, Transformer, Estimator    # basic pipeline abstraction system for building machine learning workflows
 
 __all__ = [
     "load_csv",

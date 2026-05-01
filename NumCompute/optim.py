@@ -1,10 +1,14 @@
+from more_itertools import difference
 import numpy as np
 
 
 # =========================
 # GRADIENT (FINITE DIFFERENCE)
 # =========================
-def grad(f, x, h=1e-5, method="central"):
+
+def grad(f, x, h=1e-5, method="central"):                       # we use gradient estimation to compute the vector of partial derivatives of a scalar function f at a given point x where we can choose between 
+                                                                # "forward" and "central" difference methods for numerical approximation. Use case includes optimization problems, machine learning, etc.
+
     """
     Estimate gradient of scalar function f at x.
 
@@ -17,6 +21,7 @@ def grad(f, x, h=1e-5, method="central"):
     Returns:
         np.ndarray: gradient vector
     """
+
     x = np.asarray(x, dtype=float)
     grad_vec = np.zeros_like(x, dtype=float)
 
@@ -39,13 +44,16 @@ def grad(f, x, h=1e-5, method="central"):
         else:
             raise ValueError("method must be 'forward' or 'central'")
 
-    return grad_vec
+    return grad_vec                                                        
 
 
 # =========================
 # JACOBIAN (VECTOR OUTPUT FUNCTION)
 # =========================
-def jacobian(F, x, h=1e-5, method="central"):
+
+def jacobian(F, x, h=1e-5, method="central"):                 # Jacobian estimation is defined as the matrix of all first-order partial derivatives of a vector-valued function F at a given 
+                                                              # point x where we can choose between "forward" and "central" difference methods for numerical approximation.        
+                                                  
     """
     Estimate Jacobian matrix of vector function F at x.
 
@@ -87,4 +95,5 @@ def jacobian(F, x, h=1e-5, method="central"):
 
         J[:, i] = diff
 
-    return J
+    return J                                                        # It is used in various applications such as gradietn-based optimization and particularly in neural networks like backpropagation where we need to 
+                                                                    # compute the Jacobian of the loss function with respect to the model parameters.

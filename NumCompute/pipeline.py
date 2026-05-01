@@ -1,10 +1,14 @@
 import numpy as np
 
+# pipeline.py aims to combine multiple steps into a workflow and that includes collecting raw data then preprocessing it, then applying some transformations and finally fitting a model to the data
+# where we do some transformations on the data to get desired output and then we can use the output to make predictions or evaluate the model performance.
+
 
 # =========================
 # BASE CLASSES (Protocol)
 # =========================
-class Transformer:
+
+class Transformer:                                  
     """
     Base Transformer interface.
     """
