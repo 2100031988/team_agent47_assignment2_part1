@@ -84,6 +84,7 @@ def test_quantile():
 # =========================
 # SORT & SEARCH TESTS
 # =========================
+
 def test_topk():
     v = np.array([1, 5, 3, 2])
     top, idx = topk(v, 2)
@@ -110,6 +111,7 @@ def test_quickselect():
 # =========================
 # RANK TESTS
 # =========================
+
 def test_rank():
     r = rank([10, 20, 20], method="dense")
     assert len(r) == 3
@@ -151,6 +153,7 @@ def test_mse():
 # =========================
 # OPTIM TESTS
 # =========================
+
 def test_grad():
     f = lambda x: x[0] ** 2 + x[1] ** 2
     g = grad(f, np.array([1.0, 2.0]))
