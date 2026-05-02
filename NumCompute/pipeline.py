@@ -1,3 +1,5 @@
+from platform import machine
+
 import numpy as np
 
 # pipeline.py aims to combine multiple steps into a workflow and that includes collecting raw data then preprocessing it, then applying some transformations and finally fitting a model to the data
@@ -8,7 +10,9 @@ import numpy as np
 # BASE CLASSES (Protocol)
 # =========================
 
-class Transformer:                                  
+class Transformer:                                      # a base class for data transformers that includes methods for "fitting" and "transforming data" where we can use it to create custom 
+                                                        # transformers for data preprocessing, feature engineering, etc.
+                                                        
     """
     Base Transformer interface.
     """
@@ -23,7 +27,8 @@ class Transformer:
         return self.fit(X, y).transform(X)
 
 
-class Estimator:
+class Estimator:                                         # a base class for estimators (models) that learns from the data and make predictions using fit and predict methods where we can use it to create custom 
+                                                         # models for regression, classification, etc.
     """
     Base Estimator interface (for models).
     """
@@ -38,7 +43,10 @@ class Estimator:
 # =========================
 # PIPELINE
 # =========================
-class Pipeline:
+
+class Pipeline:                                                 # a system that applies multiple steps sequentially and here the each steps input becomes the output of the previous step and it is used to build 
+                                                                # machine learning workflows where we can combine data preprocessing, feature engineering and model fitting into a single pipeline.
+
     """
     Sequential pipeline for transformers and estimators.
     """
@@ -71,9 +79,12 @@ class Pipeline:
 
 
 # =========================
-# FEATURE UNION (BONUS)
+# FEATURE UNION
 # =========================
-class FeatureUnion:
+
+class FeatureUnion:                                                   # It is a system that applies multiple transformations in parallel and combine their outputs into a single dataset where we can use it to apply 
+                                                                      # multiple feature extraction or transformation steps to the same input data and then concatenate their outputs for further processing or modeling.
+
     """
     Apply multiple transformers in parallel and concatenate outputs.
     """

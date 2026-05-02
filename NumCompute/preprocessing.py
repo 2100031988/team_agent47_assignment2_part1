@@ -1,10 +1,16 @@
 import numpy as np
 
+# the preprocessing module provides basic data preprocessing tools like scaling, encoding, and imputation. Moreover, we have the same classes in the preprocessing module as in 
+# scikit-learn but they are implemented from scratch using only NumPy. 
+
 
 # =========================
 # StandardScaler
 # =========================
-class StandardScaler:
+
+class StandardScaler:                               # It standardizes the data using Z-score so features like "mean" and "standard deviation" are calculated and used to scale the data.
+                                                    # Moreover, the default value of mean is "0" and the default value of standard deviation is "1".
+
     """Z-score standardization"""
 
     def __init__(self):
@@ -26,10 +32,14 @@ class StandardScaler:
         return self.fit(X).transform(X)
 
 
+
 # =========================
 # MinMaxScaler
 # =========================
-class MinMaxScaler:
+
+class MinMaxScaler:                                 # It scales the data to a specified range typically [0, 1]. The "minimum" and "maximum" values of the features are calculated and used to scale the data accordingly. 
+                                                    # The default range is [0, 1], but it can be customized by providing a different "feature_range" parameter during initialization.
+
     """Scale to a given range"""
 
     def __init__(self, feature_range=(0, 1)):
@@ -57,10 +67,14 @@ class MinMaxScaler:
         return self.fit(X).transform(X)
 
 
+
 # =========================
 # OneHotEncoder
 # =========================
-class OneHotEncoder:
+
+class OneHotEncoder:                                                # it converts categorical variables into binary vectors (0s and 1s) where each category is represented by a separate binary feature. 
+                                                                    # The presence of a category is indicated by a "1" in the corresponding feature while the absence is indicated by a "0".
+
     """Convert categorical variables to one-hot encoding"""
 
     def __init__(self):
@@ -85,10 +99,14 @@ class OneHotEncoder:
         return self.fit(X).transform(X)
 
 
+
 # =========================
 # SimpleImputer
 # =========================
-class SimpleImputer:
+
+class SimpleImputer:                                        # It replaces missing values (NaN) in the dataset with a specified strategy like mean or constant value. Moreover, this simple impute function can be used to handle 
+                                                            # missing data in numerical features by filling in the gaps with appropriate values based on the chosen strategy.
+
     """Replace NaN values"""
 
     def __init__(self, strategy="mean", fill_value=0):
@@ -101,8 +119,10 @@ class SimpleImputer:
 
         if self.strategy == "mean":
             self.statistics_ = np.nanmean(X, axis=0)
+
         elif self.strategy == "constant":
             self.statistics_ = np.full(X.shape[1], self.fill_value)
+
         else:
             raise ValueError("strategy must be 'mean' or 'constant'")
 

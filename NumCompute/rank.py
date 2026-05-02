@@ -1,10 +1,18 @@
+import re
+
 import numpy as np
+
+# The rank module provides functions for ranking data with tie handling and computing percentiles with various interpolation methods and These functions are implemented 
+#  from scratch using only NumPy, without relying on external libraries.
 
 
 # =========================
 # RANKING (WITH TIES)
 # =========================
-def rank(data, method="average"):
+
+def rank(data, method="average"):                           # It computes the ranks of the data while handling ties according to the specified method and the "method" parameter determines how ties
+                                                            # are handled and can take values like "average", "dense", or "ordinal".
+
     """
     Compute ranks with tie handling.
 
@@ -17,7 +25,6 @@ def rank(data, method="average"):
     """
     x = np.asarray(data)
 
-    # argsort twice gives stable ranking order
     order = np.argsort(x, kind="mergesort")
 
     ranks = np.empty(len(x), dtype=float)
@@ -52,13 +59,16 @@ def rank(data, method="average"):
     else:
         raise ValueError("method must be 'average', 'dense', or 'ordinal'")
 
-    return ranks
+    return ranks                                                                # it returns an array of ranks corresponding to the input data, with ties handled according to the specified method.
 
 
 # =========================
 # PERCENTILE FUNCTION
 # =========================
-def percentile(data, q, interpolation="linear"):
+
+def percentile(data, q, interpolation="linear"):                          # it returns the q-th percentile of the data using the specified interpolation method and the "interpolation" parameter determines 
+                                                                          # how the percentile is computed when the desired percentile lies between two data points and can take values like "linear", "lower", "higher", or "midpoint".
+
     """
     Compute percentile with interpolation methods.
 
@@ -104,4 +114,4 @@ def percentile(data, q, interpolation="linear"):
         return x[lo] + (pos - lo) * (x[hi] - x[lo])
 
     else:
-        raise ValueError("Invalid interpolation method")
+        raise ValueError("Invalid interpolation method")                        # returns the computed percentile value based on the specified interpolation method

@@ -1,10 +1,18 @@
+from shutil import which
+
 import numpy as np
+
+
+# The sort_search module provides functions for stable sorting, multi-key sorting, top-k selection, binary search, and quickselect and these 
+# functions are implemented from scratch using only NumPy, without relying on external libraries.
 
 
 # =========================
 # Stable Sort
 # =========================
-def stable_sort(X, axis=-1):
+
+def stable_sort(X, axis=-1):                                    # It performs a stable sort on the input array X along the specified axis using NumPy's sort function with the "stable" sorting algorithm.
+
     """
     Stable sort wrapper using NumPy.
 
@@ -15,6 +23,7 @@ def stable_sort(X, axis=-1):
     Returns:
         np.ndarray: sorted array
     """
+
     X = np.asarray(X)
     return np.sort(X, axis=axis, kind="stable")
 
@@ -22,7 +31,10 @@ def stable_sort(X, axis=-1):
 # =========================
 # Multi-key Sort
 # =========================
-def multi_key_sort(X, keys):
+
+def multi_key_sort(X, keys):                                    # it returns a sorted version of the input 2D array X based on multiple column keys specified in the "keys" parameter and the sorting is performed using NumPy's 
+                                                                # np.lexsort function which allows for sorting by multiple keys in a stable manner.
+
     """
     Sort rows of a 2D array using multiple column keys.
 
@@ -33,12 +45,14 @@ def multi_key_sort(X, keys):
     Returns:
         np.ndarray: sorted array
     """
+
     X = np.asarray(X)
 
     if X.ndim != 2:
-        raise ValueError("multi_key_sort expects a 2D array")
 
-    # reverse keys because lexsort uses last key as primary
+        raise ValueError("multi key sort expects a 2D array")
+
+
     sort_indices = np.lexsort([X[:, k] for k in reversed(keys)])
     return X[sort_indices]
 
@@ -46,7 +60,10 @@ def multi_key_sort(X, keys):
 # =========================
 # Top-K (Partial Sort)
 # =========================
-def topk(values, k, largest=True, return_indices=True):
+
+def topk(values, k, largest=True, return_indices=True):             # Top-k is one of the most common operations in data processing and machine learning where we want to find the top k largest or smallest elements from a dataset and 
+                                                                    # this function efficiently retrieves the top k elements from the input array "values" based on the specified parameters.
+
     """
     Return top-k elements using np.argpartition.
 
@@ -59,6 +76,7 @@ def topk(values, k, largest=True, return_indices=True):
     Returns:
         values or (values, indices)
     """
+
     values = np.asarray(values)
 
     if k <= 0:
@@ -73,7 +91,6 @@ def topk(values, k, largest=True, return_indices=True):
 
     top_vals = values[idx]
 
-    # sort final output
     order = np.argsort(-top_vals if largest else top_vals)
     idx = idx[order]
     top_vals = top_vals[order]
@@ -84,7 +101,9 @@ def topk(values, k, largest=True, return_indices=True):
 # =========================
 # Binary Search
 # =========================
-def binary_search(sorted_array, x):
+
+def binary_search(sorted_array, x):                             # it performs a binary search on a sorted array to find the index of a specified value "x" and it uses NumPy's "searchsorted" function to efficiently locate 
+                                                                # the position where "x" would be inserted in the sorted array while maintaining the order.
     """
     Binary search using NumPy searchsorted.
 
@@ -95,6 +114,7 @@ def binary_search(sorted_array, x):
     Returns:
         (index, found)
     """
+
     arr = np.asarray(sorted_array)
 
     idx = np.searchsorted(arr, x)
@@ -106,7 +126,10 @@ def binary_search(sorted_array, x):
 # =========================
 # Quickselect (Educational)
 # =========================
-def quickselect(arr, k):
+
+def quickselect(arr, k):                                    # it finds the k-th smallest element in an unsorted array using the Quickselect algorithm which is an efficient selection algorithm and works by partitioning 
+                                                            # the array around a pivot element and narrowing down the search space until the k-th smallest element is found.
+
     """
     Find k-th smallest element using partition method.
 
@@ -117,9 +140,10 @@ def quickselect(arr, k):
     Returns:
         value at kth position
     """
+
     arr = np.asarray(arr).copy()
 
     if k < 0 or k >= len(arr):
-        raise ValueError("k out of bounds")
+        raise ValueError("k index out of bounds")
 
     return np.partition(arr, k)[k]
