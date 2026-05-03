@@ -6,9 +6,9 @@ contact_links:
     about: Ask questions or discuss ideas related to NumCompute
 
   - name: Documentation / Usage Help
-    url: https://github.com/2100031988/NumCompute/blob/main/README.md
+    url: https://github.com/2100031988/team_agent47_assignment2_part1/blob/master/README.md
     about: Check the README for installation, usage, and examples before opening an issue
 
   - name: Contributing Guidelines
-    url: https://github.com/2100031988/NumCompute/blob/main/CONTRIBUTING.md
+    url: https://github.com/2100031988/team_agent47_assignment2_part1/blob/master/CONTRIBUTING.md
     about: Please read the contributing guide before submitting issues or pull requests
