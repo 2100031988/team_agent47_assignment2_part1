@@ -1,5 +1,14 @@
 blank_issues_enabled: false
+
 contact_links:
-  - name: Documentation
-    url: https://github.com/2100031988/NumCompute
-    about: Check README before creating an issue
+  - name: General Questions & Discussions
+    url: https://github.com/2100031988/NumCompute/discussions
+    about: Ask questions or discuss ideas related to NumCompute
+
+  - name: Documentation / Usage Help
+    url: https://github.com/2100031988/NumCompute/blob/main/README.md
+    about: Check the README for installation, usage, and examples before opening an issue
+
+  - name: Contributing Guidelines
+    url: https://github.com/2100031988/NumCompute/blob/main/CONTRIBUTING.md
+    about: Please read the contributing guide before submitting issues or pull requests
