@@ -30,7 +30,7 @@ class Transformer:                                      # a base class for data 
 class Estimator:                                         # a base class for estimators (models) that learns from the data and make predictions using fit and predict methods where we can use it to create custom 
                                                          # models for regression, classification, etc.
     """
-    Base Estimator interface (for models).
+    Base Estimator interface 
     """
 
     def fit(self, X, y):
