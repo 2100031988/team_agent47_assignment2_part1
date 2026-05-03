@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "numcompute"
-version = "0.1.3"
+version = "0.1.4"
 description = "A lightweight NumPy-inspired numerical computing library"
 
 readme = { file = "PYPI_README.md", content-type = "text/markdown" }
