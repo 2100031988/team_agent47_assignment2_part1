@@ -46,7 +46,7 @@ pip install -i https://test.pypi.org/simple/ numcompute
 We can also install it from my repository through github commands in the **terminal** in visual studio code.
 
 ```bash
-git clone https://github.com/2100031988/NumCompute.git
+git clone https://github.com/2100031988/team_agent47_assignment2_part1.git
 cd NumCompute
 pip install .
 ```

@@ -12,7 +12,7 @@ requires-python = ">=3.8"
 dependencies = ["numpy"]
 
 authors = [
-    { name = "Sabyasachi Kumar" }
+    { name = "Sabya Kumar" }
 ]
 
 license = { file = "LICENSE" }
@@ -26,8 +26,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/2100031988/NumCompute"
-Issues = "https://github.com/2100031988/NumCompute/issues"
+Homepage = "https://github.com/2100031988/team_agent47_assignment2_part1"
+Issues = "https://github.com/2100031988/team_agent47_assignment2_part1/issues"
 
 [tool.setuptools.packages.find]
 include = ["numcompute*"]
