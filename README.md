@@ -94,7 +94,7 @@ X_transformed = pipeline.transform(X_test)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 NumCompute/
