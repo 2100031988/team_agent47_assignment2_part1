@@ -7,13 +7,13 @@
 </p>
 
 <p align="center">
-  <a href="#-project-overview">Overview</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-installation">Installation</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-benchmarking">Benchmarking</a> •
-  <a href="#-project-structure">Structure</a> •
-  <a href="#-running-tests">Tests</a>
+  <a href="#overview">Overview</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#examples">Examples</a> •
+  <a href="#project-structure">Structure</a> •
+  <a href="#api-overview">API</a> •
+  <a href="#benchmarking">Benchmarking</a> •
+  <a href="#running-tests">Tests</a>
 </p>
 
 ---
