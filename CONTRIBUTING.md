@@ -1,7 +1,7 @@
 # Contributing to NumCompute
 
 Thank you for your interest in contributing to **NumCompute** project
-We welcome contributions from everyone!
+We always welcome contributions from everyone!
 
 ---
 
@@ -16,7 +16,7 @@ Click the **Fork** button on GitHub.
 ### 2. Clone Your Fork
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/NumCompute.git
+git clone https://github.com/2100031988/team_agent47_assignment2_part1.git
 cd NumCompute
 ```
 
