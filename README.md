@@ -137,6 +137,44 @@ NumCompute/
 
 ---
 
+## API Overview
+ 
+Below is a quick reference of the core modules and their available functions:
+ 
+| Module | Function | Description |
+|---|---|---|
+| `stats` | `mean(data)` | Computes the arithmetic mean |
+| `stats` | `median(data)` | Computes the median value |
+| `stats` | `std(data)` | Computes standard deviation |
+| `preprocessing` | `normalize(data)` | Min-max normalization |
+| `preprocessing` | `StandardScaler()` | Zero-mean, unit-variance scaling |
+| `preprocessing` | `LabelEncoder()` | Encodes categorical labels |
+| `sort_search` | `sort(data)` | Sorts an array |
+| `sort_search` | `binary_search(data, target)` | Binary search on sorted array |
+| `metrics` | `mse(y_true, y_pred)` | Mean Squared Error |
+| `pipeline` | `Pipeline(steps)` | Chains transformers sequentially |
+| `pipeline` | `.fit(X)` | Fits the pipeline to data |
+| `pipeline` | `.transform(X)` | Applies transformations to data |
+ 
+---
+
+ 
+## Benchmarking
+ 
+The results show that both methods produce nearly identical mean values and we can conclude that accuracy is not a concern but the real difference lies in execution time 
+where we can see that vectorized is approximately 80 tiume faster than loop-based.
+
+ 
+| Method | Mean | Time (seconds) |
+|---|---|---|
+| Vectorized | 0.5001100158230776 | 0.001165151596069336 |
+| Loop-based | 0.5001100158230763 | 0.09347009658813477 |
+ 
+This gap grows even larger with bigger datasets, which is why NumPy vectorized operations are preferred in machine learning pipelines and by the developers too!
+ 
+---
+
+
 ## Running Tests
 
 ```bash
