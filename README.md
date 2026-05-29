@@ -18,11 +18,14 @@
 
 ---
 
-
 ## Demo
 
 <p align="center">
-  <img src="demo/demo.gif" alt="NumCompute Demo" width="900">
+  <img src="demo/demo.gif" alt="NumCompute Demo" width="600">
+</p>
+
+<p align="center">
+  📺 <a href="https://www.youtube.com/watch?v=zixmd_Ht3O0&t=1s">Watch the full explanation here</a>
 </p>
 
 ---
