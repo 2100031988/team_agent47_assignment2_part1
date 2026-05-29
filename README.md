@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  📺 <a href="https://www.youtube.com/watch?v=zixmd_Ht3O0&t=1s">Watch the full explanation here</a>
+  <em><a href="https://www.youtube.com/watch?v=zixmd_Ht3O0&t=1s">Watch the full explanation here!</a></em>
 </p>
 
 ---
