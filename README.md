@@ -20,7 +20,9 @@
 
 ## Demo
 
-![NumCompute Demo](demo/demo.gif)
+<p align="center">
+  <img src="demo/demo.gif" alt="NumCompute Demo" width="900">
+</p>
 
 ---
 
