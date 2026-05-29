@@ -18,6 +18,12 @@
 
 ---
 
+## Demo
+
+![NumCompute Demo](demo/demo.gif)
+
+---
+
 ## Overview
 
 **NumCompute** is a lightweight machine learning framework built using **NumPy**. It can function on core libraries like **scikit-learn** while keeping the internal function transparent and understandable for users.
